@@ -1,0 +1,69 @@
+<!-- <div class="card">
+    <img src="https://placehold.it/150x150" alt="Placeholder image">
+    <div class="card-info">
+        <span>
+      <h1>KOHENUR HOSTELS</h1>
+      <h3>Gacchibowli</h3>
+     
+      <a href="#">More Details</a></span>
+    </div>
+  </div>
+               -->
+
+               <!-- <div class="card">
+                <img src="https://placehold.it/150x150" alt="Placeholder image">
+                <div class="card-info">
+                  <h2>Card Title</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="#">Read More</a>
+                </div>
+              </div> -->
+
+
+
+
+              
+    
+      <div class="row" *ngFor="let product of HostelsList">
+        <div class="col-sm-5">
+          <img class="d-block w-100" src="https://picsum.photos/150?image=641"  [src]="product.imagepath" alt="product image">
+        </div>
+        <div class="col-sm-7">
+          <div class="card-block">
+                      <h1 class="card-title">{{product.hst_name}}</h1>
+            <!-- <h1>{{product.hst_name}}</h1> -->
+                      <h3>{{product.area}}</h3>
+
+            
+            
+            <a href="#" class="btn btn-primary ">More Details >></a>         
+          </div>                 
+        </div>
+                  
+      </div>
+              
+
+
+
+
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <body>
+      <div class="container">
+          <h1>Hostel details</h1>
+          <div+++++++++++++++++++++++++++++++ class="cardcontainer" *ngFor="let product of HostelsList">
+              <div class="photo">
+                  <img src="https://images.pexels.com/photos/2346006/pexels-photo-2346006.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" 
+                   [src]="product.imagepath" alt="product Image">
+              </div>
+              <div class="content">
+                  <p class="txt4"></p>
+                  <h3 class="txt5">{{product.hst_name}} </h3>
+                   <h2 class="txt2">{{product.area}}</h2> 
+              </div>
+              <div class="footer">
+                  <p><a class="waves-effect waves-light btn" href="#">Read More</a></p>
+              </div>
+          </div>
+      </div>
+      
+      </body> -->

@@ -1,0 +1,173 @@
+*{
+    margin: 100;
+    padding: 100;
+    box-sizing: border-box;
+  }
+  
+  body{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+     background-color: #040717;
+     /* background-image: url("https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+      /* background: url("https://www.tripsavvy.com/thmb/wcSsfZlmiusSM-eeZgPSrLPqUTw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Difference-between-hostel-and-hotel-1458729-v1-206aaa1c838f4895ba4f2ce0b301575d.png"); */
+  }
+  .register-main-container {
+      width: 100%;
+      height: 100vh;
+      background-image: url("./../../assets/home-page.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .register-main-container .reg-link{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  .login_form_container{
+      position: relative;
+      width: 400px;
+      height: 570px;
+      max-width: 400px;
+      max-height: 570px;
+      background: #040717;
+      border-radius: 50px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  .login_form_container::before{
+  
+      position: absolute;
+      width: 170%;
+      height: 170%;
+      content: '';
+      background-image: conic-gradient(transparent, transparent, transparent, #ee00ff);
+      animation: rotate_border 6s linear infinite;
+  
+  }
+  .login_form_container::after{
+  
+      position: absolute;
+      width: 170%;
+      height: 170%;
+     
+      content: '';
+      background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+      animation: rotate_border 6s linear infinite;
+      animation-delay: -3s;
+  }
+  @keyframes rotate_border{
+      0%{
+          transform: rotate(0deg);
+      }
+      100%{
+          transform: rotate(360deg);
+      }
+  }
+  .login_form{
+      position: absolute;
+      content: '';
+      background-color: rgb(245, 233, 231);
+      border-radius: 50px 5px;
+      inset: 5px;
+      padding: 50px 40px;
+      z-index: 10;
+      color:red;
+  } 
+  h2{
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center;
+  }
+  .input_group{
+      margin-top: 20px;
+     
+      position:relative;
+      display:flex;
+      align-items: center;
+      justify-content: start;
+  }
+  .input_text{
+      width: 95%;
+      height: 30px;
+      border-radius: 10px;
+      margin-left: 20px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid black;
+      font-size: 20px;
+      padding-left: 20px;
+      color: black;
+  
+  }
+  ::placeholder{
+      font-size: 15px;
+      color: black;
+      letter-spacing: 1px;
+  
+  }
+  .fa{
+      font-size: 20px;
+  
+  }
+  #login_button{
+      position: relative;
+      width: 150px;
+      height: 40px;
+      transition: 1s;
+      margin-top: 50px;
+      margin-left: 73px;
+  
+  
+  }
+  #login_button a{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      z-index: 10;
+      cursor: pointer;
+      font-size: 15px;
+      letter-spacing: 2px;
+      border: 1px solid #00ccff;
+      border-radius: 50px;
+      background-color:lightgreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .fotter {
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-right: 50px;
+      display: flex;
+      justify-content: space-between;
+      color: black;
+  
+  }
+  .fotter a{
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 15px;
+      color: black;
+  }
+  .glowIcon {
+      text-shadow: 0 0 10px #00ccff;
+  
+  }
+  .buttonn{
+  margin-top: 30px;
+    margin-left: 20px;
+  }
+  .signup-btn {
+      width: 100%;
+  }

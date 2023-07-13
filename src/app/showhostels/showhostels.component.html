@@ -1,0 +1,170 @@
+<!-- nav bar -->
+
+<div  style="  background: linear-gradient(180deg,rgba(5, 28, 23, 0.845),rgba(10, 10, 37, 0.747)); height:1800px;">
+<header class="hhh">
+  <nav class="navbar">
+    <img src = "https://logodix.com/logo/1981896.png" width = "170" height = "120">
+    <ul>
+      <li class="dropdown">
+      </li>
+      <!-- <div class="form-group">
+        <input type="text" [(ngModel)]="term" name="term" class="form-cntrol " placeholder="Search" class="bi bi-search"><i class="bi bi-search"></i>
+          <div class="searchbar"  ></div>
+        <a href="" routerLink="hostelheader"><u>back to home >> </u></a> 
+      </div> -->
+      
+
+    
+
+      <div class="main">
+  
+        <!-- Actual search box -->
+        <div class="form-group has-search">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="text" class="form-control" placeholder="Search" name="term"  [(ngModel)]="term" style="color:black">
+        </div> 
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <li><a routerLink="home"><i class="fa fa-home" aria-hidden="true"></i>          Home</a></li> -->
+      <li><a routerLink="hostelregistration"><i class="fa fa-home" aria-hidden="true"></i>         Add Hostels</a></li>
+      <li><a routerLink="showhostels"><i class="fa fa-home" aria-hidden="true"></i>          View Hostels</a></li>
+      <li><a routerLink="userheader"><i class="fa fa-home" aria-hidden="true"></i>          View Users</a></li>
+      <li><a routerLink="login" (click)="setLogoutStatus()"><i class="fa fa-sign-in" aria-hidden="true"></i>       Logout</a></li> 
+    </ul> 
+  </nav>
+</header>
+
+
+
+
+
+<!-- update form -->
+
+
+<div class="container " >
+  <div class="modal fade" id="empModel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h4 class="modal-title">Update Form</h4>
+          <span class="close" data-dismiss="modal">&times;</span>
+        </div>
+        <div class="modal-body">
+          
+          <form class="" >
+
+            Enter HostelName: <input type="text" name="hst_name" [(ngModel)]="editObject.hst_name"
+              class="form-control"><br />
+            Enter OwnerName: <input type="text" name="owner_nam" [(ngModel)]="editObject.owner_nam"
+              class="form-control"><br />
+            Enter Email ID: <input type="text" name="emailId" [(ngModel)]="editObject.emailId" disabled
+              class="form-control"><br />
+            Enter Mobile No: <input type="text" name="hst_num" [(ngModel)]="editObject.hst_num"
+              class="form-control"><br />
+            Enter Area: <input type="text" name="area" [(ngModel)]="editObject.area" class="form-control"><br />
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" (click)="updateHstl()" data-dismiss="modal">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="form-group">
+    <input type="text" [(ngModel)]="term" name="term" class="form-cntrol" placeholder="Search ">
+    <div class="searchbar"><button type="submit"><i class="fa fa-search"></i></button></div>
+    <a href="" routerLink="hostelheader"><u>back to home >> </u></a> 
+  </div> -->
+
+
+
+  
+
+    <!-- <table align="center" border="2">
+      <tr><th>Id</th><th>HostelName</th><th>OwnerName</th><th>EmailId</th><th>mobileNo</th><th>Area</th>
+      <th colspan="2">Actions</th></tr>
+      <tr *ngFor="let hostel of hostels">
+          <td>{{hostel.hst_Id}}</td> 
+          <td>{{hostel.hst_name}}</td> 
+          <td>{{hostel.owner_nam}}</td> 
+          <td>{{hostel.emailId}}</td> 
+          <td>{{hostel.hst_num }}</td> 
+          <td>{{hostel.area }}</td> 
+           <td><button (click)="deleteHstl(hostel.Hst_Id)"><div class="glyphicon glyphicon-trash"></div></button></td>
+           <td><button (click)="showEditPopup(hostel)"><div class="glyphicon glyphicon-pencil"></div></button></td>
+      </tr>
+      </table>             -->
+
+      <!-- <div class="container hostel-container">
+
+    <div class="main" *ngFor="let hostel of hostels | filter:term ">
+      <div class="list-group">
+        <ul class="cards ">
+          <li class="cards_item">
+            <div class="card-sm">
+              <div class="card_image"><img
+                  src="https://www.thegrandyork.co.uk/wp-content/uploads/elementor/thumbs/Heritage-Suite-454-Bedroom-Roman-House-min-q23v365yakb8sr2urqt7rdcxdbb9oe2939e3n5vii8.jpg">
+              </div>
+              <div class="card_content">
+                <h2 class="card_title"> HostelName: {{hostel.hst_name}}</h2>
+                <p class="card_text">OwnerName: {{hostel.owner_nam}} </p>
+                <p class="card_text">EmailId: {{hostel.emailId}} </p>
+                <p class="card_text">MobileNo: {{hostel.hst_num}} </p>
+                <p class="card_text"> AreaName: {{hostel.area}} </p>
+
+
+                <button (click)="deleteHstl(hostel.hst_Id)">
+                  <div class="fa fa-trash"></div>Delete
+                </button>
+                <button (click)="showEditPopup(hostel)">
+                  <div class='fa fa-edit'></div>Edit
+                </button>
+              </div>
+            </div>
+          </li>
+         </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- card html -->
+<div>
+<div class="container hostel-container " >
+
+<div class="card " *ngFor="let hostel of hostels | filter:term " >
+  <div class="card-image">
+    <img src="https://cdn.pixabay.com/photo/2014/08/08/21/03/bedroom-413706__340.jpg" alt="Hostel Image">
+  </div>
+  <div class="card-details">
+    <h3 class="hostel-name">HostelName: {{hostel.hst_name}}</h3>
+    <p class="owner-name">OwnerName: {{hostel.owner_nam}} </p>
+    <p class="email">EmailId: {{hostel.emailId}} </p>
+    <p class="mobile">MobileNo: {{hostel.hst_num}}</p>
+    <p class="area">AreaName: {{hostel.area}}</p>
+    <div class="card-buttons">
+      <button class="edit-button" (click)="showEditPopup(hostel)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      <button class="delete-button" (click)="deleteHstl(hostel.hst_Id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>

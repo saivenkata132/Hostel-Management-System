@@ -1,0 +1,90 @@
+<!-- nav bar -->
+
+
+
+<header class="hhh">
+  <nav class="navbar">
+    <img src = "https://logodix.com/logo/1981896.png" width = "170" height = "120">
+    <ul>
+      <li class="dropdown">
+      </li>
+
+      <!-- <div class="main">
+  
+        <div class="form-group has-search">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="text" class="form-control" placeholder="Search" name="term"  [(ngModel)]="term" style="color:black">
+        </div> 
+      </div> -->
+      
+      <!-- <li><a routerLink="home"><i class="fa fa-home" aria-hidden="true"></i>          Home</a></li> -->
+      <li><a routerLink="hostelregistration"><i class="fa fa-home" aria-hidden="true"></i>         Add Hostels</a></li>
+      <li><a routerLink="showhostels"><i class="fa fa-home" aria-hidden="true"></i>          View Hostels</a></li>
+      <li><a routerLink="userheader"><i class="fa fa-home" aria-hidden="true"></i>          View Users</a></li>
+      <li><a routerLink="login" (click)="setLogoutStatus()"><i class="fa fa-sign-in" aria-hidden="true"></i>       Logout</a></li> 
+    </ul> 
+  </nav>
+</header>
+
+
+<!-- users List -->                                    
+
+<body>
+  <div class="total" >
+      <div class="courses-container" *ngFor="let currentuser of customers">
+          <div class="course" >
+              <div class="course-preview">
+                  <img src="./../../assets/profile.png" alt="">
+              </div>
+              <div class="course-info">
+                 
+                  <h3><u> profile Details </u></h3>
+  
+                  <h4>FirstName: {{ currentuser.firstName}}</h4>
+                  <h4>LastName: {{currentuser.lastName}}</h4>
+                  <h4>EmailId: {{currentuser.userEmail}}</h4>
+                  <h4>MobileNumber: {{currentuser.number}}</h4>  
+                  <button class="btn" (click)="showEditPopup(currentuser)" class="fa fa-pencil"></button>
+                  <!-- <button class="btn" (click)="deleteCust(currentuser.cust_Id)" class="fa fa-trash" ></button> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+
+
+
+
+
+<div class="container ">
+  <div class="modal fade" id="empModel">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  
+                  <h4 class="modal-title">Update Form</h4>
+                  <span class="close" data-dismiss="modal">&times;</span>
+              </div>
+              <div class="modal-body">
+                  <form class="form-group">
+                      Enter Id: <input type="number" name="userId" [(ngModel)]="editObject.userId" disabled
+                          class="form-control"><br />
+                      Enter FirstName: <input type="text" name="firstName" [(ngModel)]="editObject.firstName"
+                          class="form-control"><br />
+                      Enter LastName: <input type="text" name="lastName" [(ngModel)]="editObject.lastName"
+                          class="form-control"><br />
+                      Enter Mobile No: <input type="text" name="number" [(ngModel)]="editObject.number"  
+                          class="form-control"><br />
+                          Enter password: <input type="text" name="password" [(ngModel)]="editObject.password"  
+                          class="form-control"><br />
+                      Enter EmailId: <input type="text" name="userEmail" [(ngModel)]="editObject.userEmail" disabled
+                          class="form-control">
+                      
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button class="btn btn-primary btn-sm" (click)="updateCust()" data-dismiss="modal">Update</button>
+              </div>
+          </div>
+      </div>
+  </div> 

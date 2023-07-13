@@ -1,0 +1,215 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+
+
+/* card css */
+body{
+  background: linear-gradient(180deg,rgba(5, 28, 23, 0.845),rgba(10, 10, 37, 0.747));
+
+}
+
+.card {
+  width: 300px;
+  background-image: linear-gradient(to right, #dfdcdc, #4444447b);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  /* margin-left: 500px; */
+  margin-top: 50px;
+  /* width: 100%; */
+  /* max-width: 1100px; */
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left:auto;
+  margin-right:auto; */
+}
+
+.card:hover {
+  transform: scale(1.10);
+}
+
+.card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 20px;
+}
+
+.hostel-name {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.owner-name {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.email,
+.mobile,
+.area {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.card-buttons {
+  margin-top: 10px;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 30px;
+  width: 70px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #0056b3;
+}
+
+.hostel-container{
+  /* width: 100%;
+  max-width: 1100px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left:auto;
+  margin-right:auto;
+  top: 10px;
+}
+
+
+
+
+/* nav bar */
+
+.navbar {
+  background:  linear-gradient(45deg, #090979,#00d4ff);
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 30px 20px;
+  margin-left: 30px;
+}
+
+.navbar li a {
+  padding: 3px 3px;
+  text-decoration: none;
+  color: white;
+  margin-top: 700px;
+  font-size: 18px;
+  margin-right: 50px;
+}
+
+.navbar input {
+  padding: 3px 17px;
+  width: 100px;
+  color: aqua;
+  box-shadow: 0 0 5px cyan,
+  
+  0 0  25px cyan, 0 0 50px cyan,
+    
+    /* 0 0 100px cyan, 0 0 200px cyan; */
+}
+
+.hhh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-group input{
+  /* margin-right: 50px; */
+  /* width: 100px; */
+  width: 200px;
+    margin-right: 50px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+.form-group .searchbar .fa{
+  padding-top: -40px;
+}
+
+ .fa-search button{
+  text-transform: none;
+    /* margin-top: -47px;
+    margin-left: -42px; */
+
+}
+
+
+
+
+/* update form btn */
+
+.modal-footer .btn{
+  color: red;
+  width: 150px;
+  margin-right: 150px;
+  font-size: 20px;
+  
+}
+
+.form-group{
+  color: darkgreen;
+  font-size: 20px;
+}
+
+input{
+  color: rgb(183, 108, 10);
+}
+
+
+Styles for wrapping the search box
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+

@@ -1,0 +1,118 @@
+<!-- nav bar -->
+
+
+<body>
+  <header class="hhh">
+    <nav class="navbar">
+      <img src = "https://logodix.com/logo/1981896.png" width = "100px" height = "auto">
+      <ul>
+        <li><a routerLink="home" class="fa fa-home"> Home</a></li>
+        <li class="dropdown">
+          <a class="dropbtn" data-toggle="dropdown"class="fa fa-sign-in" routerLink="login"> Login</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" data-toggle="dropdown" class="fa fa-user" routerLink="register"> Register</a>
+        </li>
+        <li><a href="#" routerLink="about" class="fa fa-bars"> About</a></li>
+      </ul>
+      <!-- <div class="search">
+        <input type="text" placeholder="Search Location" name="search" id="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div> -->
+    </nav>
+  </header>
+  </body>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  register form -->
+
+<div class="register-main-container">
+  <div class="login_form_container">
+    <div class="login_form">
+      <h2>Registration</h2>
+
+      <div class="input_group">
+        <form class="was-validated" #regForm="ngForm" (ngSubmit)="registerCust(regForm.value)" novalidate>
+
+          <div class="input_group">
+            <i class="fa fa-user" style="font-size:21px"></i>
+          <input type="text" placeholder="First Name" class="input_text" id="firstName" name="firstName" minlength="3"
+            required ngModel #firstName="ngModel" autocomplete="off" aria-required="true">
+            <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+        
+          
+
+          <div class="input_group">
+            <i class="fa fa-user" style="font-size:21px"></i>
+            <input type="text" class="input_text" type="text" placeholder="Last Name" id="lastName" name="lastName"
+              minlength="3" required ngModel #lastName="ngModel" autocomplete="off">
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+
+          <div class="input_group">
+            <i class="fa fa-phone" style="font-size:24px"></i>
+            <input type="text" class="input_text" id="number" name="number" placeholder="Phone Number"
+              pattern="[0-9]{10}" required ngModel #number="ngModel">
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+
+
+
+          <div class="input_group">
+            <i class="fa fa-envelope" style="font-size:20px"></i>
+            <input type="emailId" class="input_text" id="userEmail" name="userEmail" placeholder="EmailId" required ngModel
+              #userEmail="ngModel">
+              <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+
+
+          <div class="input_group">
+            <i class="fa fa-unlock-alt" style="font-size:24px"></i>
+            <input type="password" class="input_text" placeholder="Password" id="password" name="password" minlength="8"
+              required ngModel #password="ngModel">
+              <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div> 
+          </div>
+
+
+
+
+          <div class="buttonn">
+
+            <button  [disabled]="regForm.invalid"   type="submit" class="btn btn-primary bb signup-btn">Sign up</button>
+
+          </div>
+          <div class="reg-link">
+            <div class="signup-link">Already have account ?  <a href="#" routerLink="login" >Login here</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

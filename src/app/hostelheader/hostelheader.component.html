@@ -1,0 +1,297 @@
+
+<!-- navbar form -->
+ <header class="hhh">
+  <nav class="navbar">
+    <img src = "https://logodix.com/logo/1981896.png" width = "170" height = "120">
+    <ul>
+      <li class="dropdown">
+      </li>
+      <!-- <li><a routerLink="home"><i class="fa fa-home" aria-hidden="true"></i>          Home</a></li> -->
+      <!-- <li><a routerLink="hostelregistration"><i class="fa fa-home" aria-hidden="true"></i>         Add Hostels</a></li> -->
+      <li><a routerLink="showhostels"><i class="fa fa-home" aria-hidden="true"></i>          View Hostels</a></li>
+      <li><a routerLink="userheader"><i class="fa fa-home" aria-hidden="true"></i>          View Users</a></li>
+      <li><a routerLink="login" (click)="setLogoutStatus()"><i class="fa fa-sign-in" aria-hidden="true"></i>       Logout</a></li> 
+    </ul> 
+  </nav>
+</header>
+
+
+
+
+<!-- reg form -->
+<div class="register-main-container">
+  <div class="login_form_container">
+    <div class="login_form">
+      <h2>Add NewHostel</h2>
+
+      <div class="input_group">
+        <form class="was-validated" #regForm="ngForm" (ngSubmit)="registerhstl(regForm.value)" novalidate>
+
+          <div class="input_group">
+            <i class="fa fa-user" style="font-size:20px"></i>
+          <input type="text" placeholder="Hostel Name" class="input_text" id="hst_name" name="hst_name" minlength="3"
+            required ngModel #hst_name="ngModel" autocomplete="off" aria-required="true">
+            <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <div class="input_group">
+            <i class="fa fa-user" style="font-size:20px"></i>
+            <input type="text" class="input_text" type="text" placeholder="Owner Name" id="owner_nam" name="owner_nam"
+              minlength="3" required ngModel #owner_nam="ngModel" autocomplete="off">
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+
+            <div class="input_group">
+              <i class="fa fa-envelope" style="font-size:18px"></i>
+              <input type="emailId" class="input_text" id="emailId" name="emailId" placeholder="EmailId" required ngModel
+                #emailId="ngModel">
+                <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+
+          <div class="input_group">
+            <i class="fa fa-phone" style="font-size:20px"></i>
+            <input type="text" class="input_text" id="hst_num" name="hst_num" placeholder="Mobile Number"
+              pattern="[0-9]{10}" required ngModel #hst_num="ngModel">
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <div class="input_group">
+            <i class="fa fa-map-marker" style="font-size:24px"></i>
+            <input type="text" class="input_text" placeholder="Area Name" id="area" name="area" minlength="3"
+              required ngModel #area="ngModel">
+              <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div> 
+          </div>
+
+          <div class="buttonn">
+
+            <button  [disabled]="regForm.invalid"   type="submit" class="btn btn-primary bb signup-btn">Add Hostel</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="about-page-container">
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="https://s-ec.bstatic.com/xdata/images/hotel/max500/203519294.jpg?k=ba316a53158c268c45a2803a8e873fc447d902721d456ed7f4f12530677bef06&o=" alt="" class="image1">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ENy1xbwhAs_dW_56BCKPOfYilc39viOFQMN5kRil8Q&usqp=CAU&ec=48600112" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+          <h2>Welcome to Hostels</h2>
+          <p class="style"> We understand that living away from home can be challenging, and that's why we provide a safe and secure environment for our residents. Our staff is available 24/7 to ensure that your stay is comfortable and hassle-free. We also have CCTV cameras installed for added security.
+
+            Apart from comfortable living spaces, we also offer additional facilities such as a shared kitchen, laundry, and lounge area. We also provide nutritious and tasty meals on request. Our goal is to make your stay at our PG hostel as convenient and comfortable as possible.
+            
+            We believe in fostering a sense of community among our residents, and our common areas are designed to encourage interaction and socializing. Our PG hostel is the perfect place to meet new people, make friends, and create lasting memories.
+            
+            So, if you're looking for a comfortable and affordable PG hostel in [City or Locality], look no further than [Name of your PG Hostel]. Contact us today to book your stay and experience our warm hospitality.
+            
+            
+            
+            
+            
+      
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+          <h2>Rooms  Suites</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW ALL</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/UL/WN/WP/121966365/20190118-130048-jpg-250x250.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Single share</h3>
+            <p> <span>From</span>10000 <span></span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://www.sibmhyd.edu.in/assets/img/gallery/10-04-2015/accomodation/Best%20Hostel%20Rooms%20-%20SIBM%20Hyderabad.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Double Share</h3>
+            <p> <span>Starts From</span>12000 <span></span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://www.stayindiu.com/hotels/palacio-de-diu/gallery/Palacio%20de%20diu%203.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Three share</h3>
+            <p> <span>Starts From</span>129000 <span></span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Our Amenities</h2>
+        <p> </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span><i class="fa fa-wifi" aria-hidden="true"></i>Wifi</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & yogo</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Washing Machine</span>
+          </div>
+         
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Mess</span>
+          </div>
+          
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span>Drinking & smoking</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>TV </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>AT THE HEART OF COMMUNICATION</h5>
+          <h2>People Say</h2>
+        </div>
+
+        <div class="para">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+          <div class="box flex">
+            <div class="img">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ENy1xbwhAs_dW_56BCKPOfYilc39viOFQMN5kRil8Q&usqp=CAU&ec=48600112" alt="">
+            </div>
+            <div class="name">
+              <h5>KATE PALMER</h5>
+              <h5>IDAHO</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <footer class="about-page-footer">
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://logodix.com/logo/1981896.png" width="170"  height="120" />
+        <p></p>
+       
+      </div>
+
+ 
+
+      <div class="box">
+        <h3> <u>  For Customers </u></h3>
+        <ul>
+          <li>About Rooms</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3><u>  Contact Us</u></h3>
+
+        <ul>
+          <li>3015 Near AMB mall, Diamond park , Merrick Way Gacchibowli 530032</li>
+          <li><i class="far fa-envelope"></i>   vamsi@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>  +91 9160368808 </li>
+          
+          <li><i class="far fa-comments"></i> 24 / 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer> -->

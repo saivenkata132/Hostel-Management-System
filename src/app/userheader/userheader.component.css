@@ -1,0 +1,161 @@
+
+/* user list css */
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+body{
+  background: linear-gradient(180deg,rgba(5, 28, 23, 0.845),rgba(10, 10, 37, 0.747));
+
+}
+
+.main {
+  /* width: 50%; */
+  margin-right: 60px ;
+}
+
+.course {
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	/* max-width: 100%; */
+	/* margin: 20px; */
+	overflow: hidden;
+	/* width: 600px; */
+  /* margin-left: 450px; */
+}
+
+
+.course-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+/* .btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+    margin-bottom: -20px;
+} */
+img{
+    width: 140px;
+    margin-top: 20px;
+}
+h3{
+    font-size: 30px;
+    margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(8, 1, 1);
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+
+.total{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 100px 20px;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: -60px;
+}
+
+button{
+  font-size:35px;
+  width: 80px;
+  margin-left: 25px;
+  margin-top: 15px;
+  color: red;
+}
+
+
+
+
+/* nav bar */
+
+
+
+.navbar {
+  background:  linear-gradient(45deg, #090979,#00d4ff);
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 30px 20px;
+  margin-left: 30px;
+}
+
+.navbar li a {
+  padding: 3px 3px;
+  text-decoration: none;
+  color: white;
+  margin-top: 700px;
+  font-size: 18px;
+  margin-right: 50px;
+}
+
+.navbar input {
+  padding: 3px 17px;
+  width: 100px;
+  color: aqua;
+  box-shadow: 0 0 5px cyan,
+  
+  /* 0 0  25px cyan, 0 0 50px cyan, */
+    
+    0 0 100px cyan, 0 0 200px cyan;
+}
+
+.hhh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* update form btn */
+
+.modal-footer .btn{
+  color: red;
+  width: 150px;
+  margin-right: 150px;
+  font-size: 20px;
+  
+}
+
+.form-group{
+  color: darkgreen;
+  font-size: 20px;
+}
+
+input{
+  color: rgb(183, 108, 10);
+}

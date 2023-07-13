@@ -1,0 +1,46 @@
+<div class="login-main-container">
+  <div class="login_form_container">
+    <div class="login_form">
+      <h2>Admin Login</h2>
+      <form action="/examples/actions/confirmation.php" method="post"  #loginForm="ngForm" (ngSubmit)="submitForm(loginForm.value)" novalidate>
+      <div class="input_group">
+        <i class="fa fa-user"></i>
+        <input
+          type="text" placeholder="Username"class="input_text" autocomplete="off" name="emailId"  id="emailId" required ngModel #emailId="ngModel"/>
+          <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="input_group">
+        <i class="fa fa-unlock-alt"></i>
+        <input
+          type="password"
+          placeholder="Password" class="input_text" autocomplete="off" name="password" id="password" required ngModel #password="ngModel"/>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="button_group">
+        <input  [disabled]="loginForm.invalid"  type="submit" id="login_button"  class="login_button"  value="Login">
+      </div>
+      <div class="fotter">
+       
+        <div class="border">
+  
+          <a href="" class="btn btn-block btn-outline-primary btn-google" (click)="signInWithGoogle()" > <img src="https://www.transparentpng.com/thumb/google-logo/google-logo-png-icon-free-download-SUF63j.png"   alt="Sign in with Google" />   sign in via google</a>
+            </div>
+     
+      </div>
+      <div class="reg-link">
+        <div class="signup-link">Don't have account ?  <a href="#" routerLink="hostelregistration" >register</a></div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="signup-link">Don't have account ?  <a href="#" routerLink="hostelregistration" >register</a></div>

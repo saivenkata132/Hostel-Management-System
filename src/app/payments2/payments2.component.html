@@ -1,0 +1,49 @@
+<div class="payment-container">
+
+    <form action=""  #bookForm="ngForm" (ngSubmit)="bookCust(bookForm.value)">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Billing address</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text"  placeholder="john deo" name="fullName" ngModel #fullName="ngModel">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="example@example.com" name="email" ngModel #email="ngModel">
+                </div>
+                <!-- <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="room - street - locality" name="">
+                </div> -->
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="mumbai" name="city" ngModel #city="ngModel"> 
+                </div>
+<!-- 
+                <div class="flex"> -->
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="india" name="state" ngModel #state="ngModel">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" placeholder="123 456" name="zipCode" ngModel #zipCode="ngModel">
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>  
+            
+<div class="buttonl">   
+
+ 
+    <button (click) ="makePayment(10000)"> <input type="submit" value="proceed to Payment" class="submit-btn"></button>
+   
+    <!-- <button (click) ="makePayment(15)">pay$10</button>
+    <button (click) ="makePayment(20)">pay$10</button> -->
+</div>  
+</form>

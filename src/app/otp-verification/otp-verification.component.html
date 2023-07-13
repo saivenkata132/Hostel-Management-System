@@ -1,0 +1,8 @@
+<form (ngSubmit)="verifyOtp()" #otpForm="ngForm">
+    <div class="form-group">
+      <label for="otp">OTP</label>
+      <input type="text" class="form-control" id="otp" name="otp" [(ngModel)]="otp" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Verify</button>
+  </form>
+  

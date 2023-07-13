@@ -1,0 +1,63 @@
+ <!-- <body>    
+  <div class = "navi hostel-container">
+    <div class="total">
+      <ul> 
+        <a href="" routerLink="login" (click)="setLogoutStatus()"  > LOGOUT </a>
+        <a href=""  routerLink="showcustomers">   PROFILE  </a>
+        <div class="form-bb">
+          <input type="text" [(ngModel)]="term" name="term" class="form-cntrol" placeholder="Search ">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>        
+      </ul>   
+    </div>             
+      <br>  -->
+
+
+<!-- navbar html -->
+<div style="  background: linear-gradient(180deg,rgba(5, 28, 23, 0.845),rgba(10, 10, 37, 0.747)); height: 1500px;">
+<header class="hhh">
+  <nav class="navbar">
+    <img src = "https://logodix.com/logo/1981896.png" width = "170" height = "120">
+ 
+          <div class="main" >
+  
+        <!-- Actual search box -->
+        <div class="form-group has-search" >
+         
+          <span class="fa fa-search form-control-feedback ggg" style="margin-right:5px;"></span>
+          <input type="text"  placeholder="Search" name="term"  [(ngModel)]="term" style="border-radius: 20px;">
+        </div> 
+      </div>
+    <ul>
+      <li class="dropdown"> 
+      </li>
+      <li><a routerLink="showcustomers"><i class="fa fa-home" aria-hidden="true"></i> Profile</a></li>
+      <li><a routerLink="bill"><i class="fa fa-home" aria-hidden="true"></i> view orders</a></li>
+      <li><a  (click)="setLogoutStatus()"><i class="fa fa-sign-in" aria-hidden="true"></i> Logout</a></li> 
+    </ul> 
+  </nav>
+</header>
+
+
+    
+      <!-- <div class = " hostel-container"> -->
+          <u>  <h1>  List Of Hostels </h1></u>
+
+        <div class="total"> 
+      
+      <div class="each hostel" *ngFor="let hostel of hostels | filter:term"  >
+          <div class="col-sm">
+            
+            <div class="card" style="width: 18rem; ">
+                  <img class="card-img-top" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/92/09/19/classic-king--v16412276.jpg" alt="" width="450" height="260" alt="">
+              <div class="card-body">
+                <h5 class="card-title"> <b> {{hostel.hst_name}} </b> </h5>
+                <p class="card-text"> {{hostel.area}} </p>
+                <a href="" routerLink="share">  More Details >>  </a>
+                <br><br>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+         

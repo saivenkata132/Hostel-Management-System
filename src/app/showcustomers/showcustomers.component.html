@@ -1,0 +1,101 @@
+<!-- navbar -->
+<div style="background: linear-gradient(180deg,rgba(5, 28, 23, 0.845),rgba(10, 10, 37, 0.747));">
+<header class="hhh">
+    <nav class="navbar">
+      <img src = "https://logodix.com/logo/1981896.png" width = "170" height = "120">
+      <ul>
+        <li class="dropdown"> 
+        </li>
+        <li><a routerLink="showcustomers"><i class="fa fa-home" aria-hidden="true"></i> Profile</a></li>
+        <li><a routerLink="bill"><i class="fa fa-home" aria-hidden="true"></i> view orders</a></li>
+        <li><a routerLink="header" (click)="setLogoutStatus()"><i class="fa fa-sign-in" aria-hidden="true"></i> Logout</a></li> 
+      </ul> 
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="modal fade" id="empModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <h4 class="modal-title">Update Form</h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group">
+                        Enter Id: <input type="number" name="userId" [(ngModel)]="editObject.userId" disabled
+                            class="form-control"><br />
+                        Enter FirstName: <input type="text" name="firstName" [(ngModel)]="editObject.firstName"
+                            class="form-control"><br />
+                        Enter LastName: <input type="text" name="lastName" [(ngModel)]="editObject.lastName"
+                            class="form-control"><br />
+                        Enter Mobile No: <input type="text" name="number" [(ngModel)]="editObject.number"  
+                            class="form-control"><br />
+                        Enter EmailId: <input type="text" name="userEmail" [(ngModel)]="editObject.userEmail" disabled
+                            class="form-control"><br />
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-sm" (click)="updateCust()" data-dismiss="modal">Update</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+
+
+
+
+
+<!-- <table align="center" border="2">
+    <tr><th>Id</th><th>FirstName</th><th>lastName</th><th>mobileNo</th><th>EmailId</th><th>Password</th>
+    <th colspan="2">Actions</th></tr>
+    <tr *ngFor="let customer of customers">
+        <td>{{customer.cust_Id}}</td> 
+        <td>{{customer.firstName}}</td> 
+        <td>{{customer.lastName}}</td> 
+        <td>{{customer.mob_nub }}</td> 
+        <td>{{customer.emailId }}</td> 
+        <td>{{customer.password}}</td>
+         <td><button (click)="deleteCust(customer.cust_Id)"><div class="glyphicon glyphicon-trash"></div></button></td>
+         <td><button (click)="showEditPopup(customer)"><div class="glyphicon glyphicon-pencil"></div></button></td>
+    </tr>
+    </table> -->
+
+
+<div class="total" >
+    <div class="courses-container" >
+        <div class="course">
+            <div class="course-preview">
+                <img src="./../../assets/profile.png" alt="">
+            </div>
+            <div class="course-info">
+                <h3><u> profile Details </u></h3>
+                <h4>FirstName :{{ currentuser.firstName}}</h4>
+                <h4>LastName :{{currentuser.lastName}}</h4>
+                <h4>EmailId :{{currentuser.userEmail}}</h4>
+                <h4>MobileNumber :{{currentuser.number}}</h4>
+                <button class="btn" (click)="showEditPopup(currentuser)">Edit</button>
+                <a href="" routerLink="header2">back to home >></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+   
+    
+           
+                
+   
+    

@@ -1,0 +1,91 @@
+
+
+<!-- nav bar html -->
+<header class="hhh">
+  <nav class="navbar">
+    <img src = "https://logodix.com/logo/1981896.png" width = "170" height = "120">
+    <ul>
+      <li class="dropdown">
+      </li>
+      <!-- <li><a routerLink="home"><i class="fa fa-home" aria-hidden="true"></i>          Home</a></li> -->
+      <!-- <li><a routerLink="hostelregistration"><i class="fa fa-home" aria-hidden="true"></i>         Add Hostels</a></li> -->
+      <li><a routerLink="showhostels"><i class="fa fa-home" aria-hidden="true"></i>          View Hostels</a></li>
+      <li><a routerLink="userheader"><i class="fa fa-home" aria-hidden="true"></i>          View Users</a></li>
+      <li><a routerLink="login" (click)="setLogoutStatus()"><i class="fa fa-sign-in" aria-hidden="true"></i>       Logout</a></li> 
+    </ul> 
+  </nav>
+</header>
+
+
+
+<!-- form html -->
+
+<!-- <div class="register-main-container">
+  <div class="login_form_container">
+    <div class="login_form">
+      <h2>Add NewHostel</h2>
+
+      <div class="input_group">
+        <form class="was-validated" #regForm="ngForm" (ngSubmit)="registerhstl(regForm.value)" novalidate>
+
+          <div class="input_group">
+            <i class="fa fa-user" style="font-size:20px"></i>
+          <input type="text" placeholder="Hostel Name" class="input_text" id="hst_name" name="hst_name" minlength="3"
+            required ngModel #hst_name="ngModel" autocomplete="off" aria-required="true">
+            <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <div class="input_group">
+            <i class="fa fa-user" style="font-size:20px"></i>
+            <input type="text" class="input_text" type="text" placeholder="Owner Name" id="owner_nam" name="owner_nam"
+              minlength="3" required ngModel #owner_nam="ngModel" autocomplete="off">
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+
+            <div class="input_group">
+              <i class="fa fa-envelope" style="font-size:18px"></i>
+              <input type="emailId" class="input_text" id="emailId" name="emailId" placeholder="EmailId" required ngModel
+                #emailId="ngModel">
+                <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+
+          <div class="input_group">
+            <i class="fa fa-phone" style="font-size:20px"></i>
+            <input type="text" class="input_text" id="hst_num" name="hst_num" placeholder="Mobile Number"
+              pattern="[0-9]{10}" required ngModel #hst_num="ngModel">
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <div class="input_group">
+            <i class="fa fa-map-marker" style="font-size:24px"></i>
+            <input type="text" class="input_text" placeholder="Area Name" id="area" name="area" minlength="3"
+              required ngModel #area="ngModel">
+              <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div> 
+          </div>
+
+          <div class="buttonn">
+
+            <button  [disabled]="regForm.invalid"   type="submit" class="btn btn-primary bb signup-btn">Add Hostel</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+ -->
+
+
+
+
+
+
+
